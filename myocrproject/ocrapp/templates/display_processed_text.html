@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<section id="hero" class="hero">
+    <img src="{% static 'assets/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+    <div class="container px-3 px-md-4">
+        <h1 class="mb-3 text-center text-white text-2xl font-bold sm:text-3xl md:mb-4">Processed OCR Texts</h1>
+        {% if show_prompt %}
+        <div class="row mb-4">
+            <div class="col-md-6 text-center">
+                <form method="post">
+                    {% csrf_token %}
+                    <p>Do you want to save the result?</p>
+                    <div class="form-check form-check-inline mt-3">
+                        <input class="form-check-input" type="radio" name="save_result" id="yes" value="Yes" checked>
+                        <label class="form-check-label" for="yes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="save_result" id="no" value="No">
+                        <label class="form-check-label" for="no">No</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 text-center">
+                <p>Download Results:</p>
+                <a href="{{ image_url }}" download class="btn btn-success mb-2">Download Image</a><br>
+                <a href="#" class="btn btn-info" onclick="downloadTextData()">Download Text Data</a>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container">
+                    {% if processed_text %} {% if processed_text|length > 0 %}
+                    <!-- Assuming processed_text is a list of dictionaries for the first JSON model -->
+                    {% for image_data in processed_text %} {% for image_name, texts in image_data.items %}
+                    <ul class="list-group" id="text-container-{{ forloop.counter }}">
+                        {% for text in texts %}
+                        <li class="list-group-item">{{ text }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %} {% endfor %} {% if processed_text.texts %}
+                    <!-- Assuming processed_text is a dictionary for the second JSON model -->
+                    <ul class="list-group" id="text-container">
+                        {% for text in processed_text.texts %}
+                        <li class="list-group-item">{{ text }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}{% endif %} {% else %}
+                    <p class="alert alert-danger">{{ error }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="container" id="image-container">
+                    {% if processed_text %}
+                    <img src="{{ image_url }}" alt="Processed OCR Image" class="img-fluid" style="
+                    position: unset;
+                "> {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function downloadTextData() {
+        var textToDownload = Array.from(document.getElementById('text-container').children)
+            .map(item => item.textContent)
+            .join("\n");
+
+        var blob = new Blob([textToDownload], {
+            type: 'text/plain'
+        });
+
+        var link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "TextData.txt";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+{% endblock %}

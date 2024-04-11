@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load widget_tweaks %}{% load static %}{% block content %}
+<section id="hero" class="hero">
+
+    <img src="{% static 'assets/img/hero-bg-register.jpg' %}" alt="" data-aos="fade-in">
+    <div class="container hero-container w-50 px-3 px-md-4">
+        <h2 class="mb-2 text-xl font-semibold sm:text-2xl md:mb-3">Register for Your OCR Account</h2>
+        <p class="my-4 mb-4 sm:text-lg md:mb-5">Join the OCR App today and start transforming your scanned documents into editable text with ease. Enjoy features such as saving your OCR results, accessing advanced OCR tools, and more.</p>
+        {% if messages %}
+        <div class="alert-box">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form class="w-50" method="post">
+            {% csrf_token %} {% for field in form %}
+            <div class="form-group">
+                <label>{{ field.label }}</label> {{ field|add_class:"form-control" }} {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small> {% endif %} {% for error in field.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <div class="mb-4">
+                <p class="mb-4 sm:text-lg md:mb-5">Your data's security and privacy are our top priority. Read our <a href="/policy">Privacy Policy</a>.</p>
+            </div>
+            <p class="mb-4  sm:text-lg md:mb-5">Already have an account? <a href="/login">Log in here</a>.</p>
+            <button type="submit" class="btn btn-outline-primary mt-3">Register</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

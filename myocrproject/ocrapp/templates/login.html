@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load widget_tweaks %} {% block content %}{% load static %}
+<section id="hero" class="hero">
+
+    <img src="{% static 'assets/img/hero-bg-login.jpg' %}" alt="" data-aos="fade-in">
+    <div class="container hero-container w-50 px-3 float-start px-md-4">
+        <h2 class="mb-2 text-xl font-semibold sm:text-2xl md:mb-3">Welcome Back to OCR App</h2>
+        <p class="my-4 mb-4 sm:text-lg md:mb-5">Log in to access your saved documents and enjoy seamless OCR processing.</p>
+        <form class="w-50" method="post">
+            {% csrf_token %} {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label> {{ field|add_class:"form-control" }} {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small> {% endif %} {% for error in field.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            <div class="mb-3">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <p class="mb-4 sm:text-lg md:mb-5">Don't have an account? <a href="/register">Register here</a>.</p>
+            <button type="submit" style="
+            color: var(--contrast-color);
+            background: var(--accent-color);
+            font-size: 14px;
+            padding: 8px 26px;
+            margin: 0;
+            border-radius: 4px;
+            transition: 0.3s;
+        ">Login</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

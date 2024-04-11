@@ -1,0 +1,637 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<main id="main">
+
+    <!-- Hero Section - Home Page -->
+    <section id="hero" class="hero">
+
+        <img src="{% static 'assets/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+
+        <div class="container hero-container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">We are team of talented developers extracting text from the image</p>
+                </div>
+                <div class="col-lg-5">
+                    <form action="" class="sign-up-form" data-aos="fade-up" data-aos-delay="300">
+                        <a class="register-header text-white btn-getstarted sign-up-form" data-aos="fade-up" data-aos-delay="300" href="{% url 'register' %} ">Register</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Hero Section -->
+
+
+    <!-- About Section - Home Page -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-xl-center gy-5">
+
+                <div class="col-xl-5 content">
+                    <h3>About Our OCR Solution</h3>
+                    <h2>Transforming Data Management with Advanced OCR</h2>
+                    <p>Our Optical Character Recognition (OCR) solution goes beyond conventional digitization, introducing unparalleled accuracy, multilingual support, and integration capabilities. From automating data entry to enhancing accessibility, our
+                        technology simplifies complex document handling tasks, enabling businesses and individuals to focus on what matters most. Discover how our OCR can redefine your approach to data.</p>
+                    <a href="#features" class="read-more"><span>Discover More</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="col-xl-7">
+                    <div class="row gy-4 icon-boxes">
+
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon-box">
+                                <i class="bi bi-globe"></i>
+                                <h3>Global Language Support</h3>
+                                <p>Our OCR breaks language barriers with support for over 80 languages, including scripts from across the globe, ensuring seamless processing of international documents.</p>
+                            </div>
+                        </div>
+                        <!-- End Icon Box -->
+
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box">
+                                <i class="bi bi-speedometer"></i>
+                                <h3>Unmatched Speed & Accuracy</h3>
+                                <p>Experience rapid document conversion without compromising on quality. Our advanced algorithms deliver precise text recognition and formatting retention.</p>
+                            </div>
+                        </div>
+                        <!-- End Icon Box -->
+
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon-box">
+                                <i class="bi bi-cloud-arrow-up-fill"></i>
+                                <h3>Cloud & On-Premises Solutions</h3>
+                                <p>Whether you prefer cloud-based convenience or on-premises control, our flexible deployment options cater to diverse data security and accessibility needs.</p>
+                            </div>
+                        </div>
+                        <!-- End Icon Box -->
+
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <div class="icon-box">
+                                <i class="bi bi-puzzle"></i>
+                                <h3>Seamless Integration</h3>
+                                <p>Effortlessly integrate our OCR with existing systems and workflows through robust APIs, enhancing productivity and automating data-centric operations.</p>
+                            </div>
+                        </div>
+                        <!-- End Icon Box -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Stats Section - Home Page -->
+    <section id="stats" class="stats">
+        <img src="{% static 'assets/img/stats-bg.jpg' %}" alt="" data-aos="fade-in">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Languages Supported</p>
+                    </div>
+                </div>
+                <!-- End Stats Item -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Successful Scans</p>
+                    </div>
+                </div>
+                <!-- End Stats Item -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Documents Processed</p>
+                    </div>
+                </div>
+                <!-- End Stats Item -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+                <!-- End Stats Item -->
+            </div>
+        </div>
+    </section>
+    <!-- End Stats Section -->
+
+    <!-- Services Section - Home Page -->
+    <section id="services" class="services">
+
+        <!--  Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>OCR Services</h2>
+            <p>Our advanced OCR technology offers versatile document processing capabilities, supporting 80+ languages.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-translate"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Multilingual OCR</a></h4>
+                            <p class="description">Process documents in 80+ languages, including complex scripts and character sets, with high accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-images"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Image-to-Text Conversion</a></h4>
+                            <p class="description">Convert images and scanned documents into editable text formats, facilitating easy data retrieval and editing.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-file-earmark-text"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Document Digitization</a></h4>
+                            <p class="description">Digitize physical documents into searchable, digital formats, making them easily accessible and manageable.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-pen"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Handwritten Text Recognition</a></h4>
+                            <p class="description">Our OCR system can accurately interpret handwritten notes and convert them into digital text, bridging the gap between paper and digital.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-card-text"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Data Extraction</a></h4>
+                            <p class="description">Extract key information from documents such as invoices, receipts, and forms for efficient data processing and analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-cloud-arrow-up"></i></div>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Cloud OCR Service</a></h4>
+                            <p class="description">Leverage our cloud-based OCR solutions for scalable and reliable document processing without the need for local installation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Services Section -->
+
+    <!-- Features Section - Home Page -->
+    <section id="features" class="features">
+
+        <!--  Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>OCR Features</h2>
+            <p>Discover the advanced features that make our OCR solution the choice for professionals and organizations worldwide.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+
+            <!-- Features Item -->
+            <div class="row gy-4 align-items-center features-item">
+                <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <h3>High Accuracy & Precision</h3>
+                    <p>Our OCR technology is fine-tuned for accuracy, able to recognize text across various fonts and backgrounds, minimizing errors and ensuring reliable data extraction.</p>
+                    <a href="https://www.paddlepaddle.org.cn/documentation/docs/en/guides/index_en.html" target="_blank" class="btn btn-get-started">Learn More</a>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+                    <div class="image-stack">
+                        <img src="{% static 'assets/img/features-light-1.jpg' %}" alt="" class="stack-front">
+                        <img src="{% static 'assets/img/features-light-2.jpg' %}" alt="" class="stack-back">
+                    </div>
+                </div>
+            </div>
+            <!-- End Features Item -->
+
+            <!-- Features Item -->
+            <div class="row gy-4 align-items-stretch justify-content-between features-item">
+                <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+                    <img src="{% static 'assets/img/features-light-3.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+                    <h3>Support for 80+ Languages</h3>
+                    <p>Expand your global reach with OCR support for over 80 languages, including rare and complex scripts, making it the most versatile OCR solution available.</p>
+                    <ul>
+                        <li><i class="bi bi-check"></i> Comprehensive language support for global applications.</li>
+                        <li><i class="bi bi-check"></i> Specialized recognition for complex scripts.</li>
+                        <li><i class="bi bi-check"></i> Seamless integration for multilingual documents.</li>
+                    </ul>
+                    <a href="https://www.jaided.ai/" target="_blank" class="btn btn-get-started align-self-start">Explore Languages</a>
+                </div>
+            </div>
+            <!-- End Features Item -->
+
+        </div>
+
+    </section>
+    <!-- End Features Section -->
+
+    <!-- Team Section - Home Page -->
+    <section id="team" class="team">
+
+        <!--  Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Team</h2>
+            <p>Meet the Innovators Behind the Lens: Our team of passionate technologists and visionary thinkers is dedicated to transforming the way the world interacts with text. Together, we're turning the pages of the future, one character at a time.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/darshil-aslaliya/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info text-center">
+                        <h4>Darshilkumar Aslaliya</h4>
+                        <span>CTO/CFO</span>
+                        <p>Leadership is about caring for those in your charge </p>
+                    </div>
+                </div>
+                <!-- End Team Member -->
+
+                <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-img">
+                        <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/parminder-kaur-b0360127a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info text-center">
+                        <h4>Parminder Kaur</h4>
+                        <span>Product Manager</span>
+                        <p>Innovation sets leaders apart</p>
+                    </div>
+                </div>
+                <!-- End Team Member -->
+
+                <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-img">
+                        <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/jaspreet-kaur-thind-67bb05294/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info text-center">
+                        <h4>Jaspreet Thind</h4>
+                        <span>Intern</span>
+                        <p>Create the future you envision</p>
+                    </div>
+                </div>
+                <!-- End Team Member -->
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Team Section -->
+
+    <!-- Call-to-action Section - Home Page -->
+    <section id="call-to-action" class="call-to-action">
+
+        <img src="{% static 'assets/img/cta-bg.jpg' %}" alt="">
+
+        <div class="container">
+            <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-xl-10">
+                    <div class="text-center">
+                        <h3>Unlock the Power of OCR Technology</h3>
+                        <p>Discover how our advanced OCR solution can transform your document handling. From automating data entry to digitizing archives, our technology offers a seamless way to convert scanned documents and images into editable formats.
+                            Experience unparalleled accuracy and efficiency, supporting over 80 languages, including complex scripts and handwritten text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Call-to-action Section -->
+
+    <!-- Testimonials Section - Home Page -->
+    <section id="testimonials" class="testimonials">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+                    <h3>What Our Users Say</h3>
+                    <p>
+                        Discover the transformative impact of our OCR solutions through the experiences of those who have seen their work and productivity soar. Our commitment to excellence shines in the stories of our satisfied users.
+                    </p>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="swiper">
+                        <script type="application/json" class="swiper-config">
+                            {
+                                "loop": true,
+                                "speed": 600,
+                                "autoplay": {
+                                    "delay": 5000
+                                },
+                                "slidesPerView": "auto",
+                                "pagination": {
+                                    "el": ".swiper-pagination",
+                                    "type": "bullets",
+                                    "clickable": true
+                                }
+                            }
+                        </script>
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="d-flex">
+                                        <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                                        <div>
+                                            <h3>Abhishek Srivastva</h3>
+                                            <h4>Student</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i> "Embracing the OCR technology has revolutionized the way I manage my academic research. The ability to swiftly convert printed materials into editable formats has streamlined
+                                        my study process, enabling me to focus on analysis rather than data entry."
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="d-flex">
+                                        <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                                        <div>
+                                            <h3>Vatsal Paneliya</h3>
+                                            <h4>Designer</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i> "OCR technology has been a game changer for our design team. The seamless integration of text from various sources into our projects has enriched our creative solutions
+                                        and significantly reduced turnaround times."
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="d-flex">
+                                        <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                                        <div>
+                                            <h3>Akshay Radadiya</h3>
+                                            <h4>Store Owner</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i> "Integrating OCR technology into our inventory management system has significantly improved efficiency. The ability to quickly digitize and search through our product
+                                        details has made inventory tracking and updating a breeze."
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="d-flex">
+                                        <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                                        <div>
+                                            <h3>Yash Pancholi</h3>
+                                            <h4>Freelancer</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i> "As a freelancer, OCR technology has allowed me to expand my service offerings. The efficiency it brings to document handling has not only saved me time but also enabled
+                                        me to take on more projects and diversify my portfolio."
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="d-flex">
+                                        <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img flex-shrink-0" alt="">
+                                        <div>
+                                            <h3>Vismay Patel</h3>
+                                            <h4>Entrepreneur</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i> "Incorporating OCR technology into our startup's operations has been a strategic decision that paid off immensely. The streamlined data capture process has enhanced our
+                                        analytical capabilities and empowered us to make data-driven decisions rapidly."
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Testimonials Section -->
+
+    <!-- Faq Section - Home Page -->
+    <section id="faq" class="faq">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="content px-xl-5">
+                        <h3><span>OCR Project </span><strong>FAQs</strong></h3>
+                        <p>
+                            Find answers to common questions about our OCR project, from how it works to the languages it supports and how you can integrate it into your workflows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="faq-container">
+                        <div class="faq-item faq-active">
+                            <h3><span class="num">1.</span> <span>What is OCR and how does it work?</span></h3>
+                            <div class="faq-content">
+                                <p>OCR, or Optical Character Recognition, is a technology that converts different types of documents, such as scanned paper documents, PDF files or images captured by a digital camera, into editable and searchable data. Our
+                                    OCR solution employs deep learning algorithms to enhance accuracy and speed.</p>
+                            </div>
+                            <i class="faq-toggle bi bi-chevron-right"></i>
+                        </div>
+                        <!-- End Faq item-->
+
+                        <div class="faq-item">
+                            <h3><span class="num">2.</span> <span>Which languages does your OCR support?</span></h3>
+                            <div class="faq-content">
+                                <p>Our OCR technology supports over 80 languages, including widely used languages such as English, Chinese, Spanish, and French, as well as less common languages and scripts. This makes our solution ideal for global applications
+                                    requiring multilingual support.</p>
+                            </div>
+                            <i class="faq-toggle bi bi-chevron-right"></i>
+                        </div>
+                        <!-- End Faq item-->
+
+                        <div class="faq-item">
+                            <h3><span class="num">3.</span> <span>How can I integrate your OCR into my application?</span></h3>
+                            <div class="faq-content">
+                                <p>Our OCR can be easily integrated into your applications through our API. The API is designed to be straightforward to use, allowing you to quickly add OCR capabilities to your software or services. Documentation and code
+                                    samples are available to get you started.</p>
+                            </div>
+                            <i class="faq-toggle bi bi-chevron-right"></i>
+                        </div>
+                        <!-- End Faq item-->
+
+                        <div class="faq-item">
+                            <h3><span class="num">4.</span> <span>What formats can the OCR output?</span></h3>
+                            <div class="faq-content">
+                                <p>Our OCR technology supports multiple output formats, including json, and jpg. This versatility ensures that the extracted data can be easily used or further processed according to your specific needs.</p>
+                            </div>
+                            <i class="faq-toggle bi bi-chevron-right"></i>
+                        </div>
+                        <!-- End Faq item-->
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Faq Section -->
+
+    <!-- Contact Section - Home Page -->
+    <section id="contact" class="contact">
+
+        <!--  Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Get in Touch</h2>
+            <p>Ready to explore the possibilities of Optical Character Recognition for your project? Contact us today to see how we can transform your document handling and data management processes.</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-3">
+
+
+                    <div class="info-item" data-aos="fade" data-aos-delay="400">
+                        <i class="bi bi-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:daslaliya4750@conestogac.on.ca">Darshilkumar Aslaliya</a></p>
+                        <p><a href="mailto:Parminderkaur5610@conestogac.on.ca">Parminder Kaur</a></p>
+                        <p><a href="mailto:Jthind4958@conestogac.on.ca">Jaspreet Thind</a></p>
+                    </div>
+                    <!-- End Info Item -->
+
+
+                </div>
+
+                <div class="col-lg-9">
+                    <form action="{{ 'contact-form'}}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                <button type="submit">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <!-- End Contact Form -->
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Contact Section -->
+
+</main>
+{% endblock %}
